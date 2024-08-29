@@ -3,8 +3,13 @@
 **Nombre**: Hugo Rangel Madrigales  
 **No. Control**: 22100225  
 **Carrera**: Ing. Sistemas Computacionales
+
+# Sobre MI:
+
+
    
 # <center> Semestre: </center>
+
 ***Horario:***
 
 <center>

@@ -96,4 +96,3 @@ Hola soy hugo (Soy foraneo), la verdad soy un persona introvertida y se me dific
 # Gracias por leer 
 ![wind waker](https://64.media.tumblr.com/b82d76df8a9f29418c7ad5cfa1f993b9/tumblr_ml9oby4k3L1s4kvlvo4_500.gifv)
 </center>
-

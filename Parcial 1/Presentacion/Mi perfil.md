@@ -8,6 +8,8 @@
 
 Hola soy hugo (Soy foraneo), la verdad soy un persona introvertida y se me dificulta hablar o preguntar cosas en ocasiones,actualmente no trabajo, entre mis gustos estan los videojuegos , la musica y el Gimnasio en lo que es el powerlifting.
 
+>Discord: chocomaza🦆
+
 # Lenguajes de programacion
 **Domino:** 
 1. C#  

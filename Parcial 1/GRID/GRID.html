@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <style>
+        .contenedor{
+            display:inline-grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px;
+            background-color: cadetblue;
+            row-gap :100px;
+        }
+        .contenedor2 {
+            display: grid;
+            grid-template-areas: 
+            'header header header'
+            'menu main right'
+         '  footer footer footer';
+            grid-gap: 10px;
+            background-color: #fff;
+            padding: 10px;
+        }
+        .H1 {
+        background-color: #8ca0ff;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-area:header;
+         }   
+
+    .M2 {
+    background-color: #8ca0ff;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    grid-area: menu;
+        }
+
+    .MA3 {
+    background-color: #8ca0ff;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  
+        }
+
+    .R4 {
+    background-color: #8ca0ff;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    grid-area: right;
+        }
+
+    .F5 {
+    background-color: #8ca0ff;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    grid-area:footer;
+     }
+        
+        .one{
+            grid-column: 1/3;
+            grid-row: 1/3;
+            background-color: burlywood;
+        
+        }
+        .two{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        
+        }
+        .three{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        
+        
+            </style>
+        </head>
+        <body>
+            <div class="contenedor">
+                <div class="one">HOLA </div>
+                <div class="two">HOLA </div>
+                <div class="three">HOLA </div>
+                <div class="four">HOLA </div>
+                <div class="five">HOLA </div>
+                <div class="six">HOLA </div>
+        
+
+
+            </div>
+            <div class="contenedor2">
+                    
+                <div class="H1">Header</div>
+                <div class="M2">Menu</div>
+                <div class="MA3">Main</div>
+                <div class="R4">Right</div>
+                <div class="F5">Footer</div>
+
+
+            </div>
+        
+        
+        </body>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Grid Adaptativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+        .yuji-boku-regular {
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+    .aoboshi-one-regular {
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;
+    }
+
+
+
+        .Contenedor1 {
+            display: grid;
+            grid-template-rows: 10vh auto 10vh; /* Fila para título, contenido y pie */
+            width: 100%;
+            height: 100%;
+        }
+
+        .Contenedor2 {
+            display: grid;
+            grid-template-columns: 0.5fr 2.5fr 1fr; /* Links más pequeño, Contenido Principal más grande */
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos de los elementos */
+        .Cajas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2vw; /* Tamaño del texto relativo al ancho de la pantalla */
+            color: white;
+            padding: 1vw; /* Uso de vw para padding */
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        /* Cajas con tamaño fijo */
+        #Caja1 {
+            font-family: "Aoboshi One", serif;
+            height: 10vh; 
+            background-image: url(https://media.tenor.com/dRAJFtYL3T4AAAAM/black-background-cool.gif);
+            background-position: center;
+            background-size: 10vh;
+         
+            
+        }
+
+        #Caja2 {
+          background-image: url(https://media.tenor.com/dRAJFtYL3T4AAAAM/black-background-cool.gif);
+            height: 80vh;
+             /* Altura fija */
+        }
+
+        #Caja3 {
+            background-color: rgb(0, 0, 0);
+            border: 0.5VH solid mediumorchid;
+            height: 80vh; /* Altura fija */
+        }
+
+        /* Nueva estructura para los "Items" divididos en dos secciones */
+        #Caja5 {
+            background-image: url(https://media.tenor.com/dRAJFtYL3T4AAAAM/black-background-cool.gif);
+            height: 80vh; /* Altura fija */
+            display: grid;
+            grid-template-rows: 1fr 1fr; /* Dividimos en dos partes */
+            gap: 10px; 
+          /* Separación entre Items y Máscaras */
+        }
+
+        #Caja5-Items {
+            background-color: #242628; /* Mismo color de fondo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1VH solid #000;
+            height: 35VH;
+            width: 25VW;
+            border: 0.5VH solid mediumorchid;
+        }
+
+        #Caja5-Mascaras {
+            background-image: url(https://media.tenor.com/dRAJFtYL3T4AAAAM/black-background-cool.gif);
+            height: 80vh; /* Altura fija */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1VH solid #000;
+            height: 30VH;
+            width: 25VW;
+            border: 0.5VH solid mediumorchid;
+        }
+
+        #Caja7 {
+            background-image: url(https://media.tenor.com/dRAJFtYL3T4AAAAM/black-background-cool.gif);
+            height: 10vh; /* Altura fija */
+        }
+
+        .Titulo{
+            text-align: start;
+            top: 100vh;
+            font-size: 11vh;
+            
+        }
+
+        .JuegoJ{
+            font-family: "Aoboshi One", serif;
+            font-size: 4vh;
+            height: 5vh;
+         position: absolute;
+            color:mediumorchid;
+          
+        }
+        
+        .JuegoJ:hover{
+            
+            margin-right:15vh; 
+        }
+        .majorasmask{
+            width: 10vh;
+            height: 10vh;
+            margin-left: 65vh;
+        }
+
+        #Regresar{
+           margin-right: 10vh;
+           width: 10vh;
+            height: 10vh;
+            background: black;
+            font-size: 5vh;
+            color:white;
+            font-family:fantasy;
+        }
+        #Siguiente{
+            margin-left: 10vh;
+           width: 10vh;
+            height: 10vh;
+           background: black;
+           font-size: 5vh;
+           color:white;
+           font-family:fantasy;
+        }
+
+        .mascaras{
+            height: 15vh;
+            width: 15vh;
+        }
+
+        #mascaraslink{
+          
+            height: 5vh;
+            width: 16vw;
+     margin-left: 5vw;
+             
+           font-size: 3vh;
+           color:mediumorchid;
+           font-family: "Aoboshi One", serif;
+        } 
+        .linkpng{
+            width: 10vw;
+            height: 10vh;
+
+        }
+        #Songs{
+            font-family: "Aoboshi One", serif;
+            font-size: 4vh;
+            height: 5vh;
+     
+            color:mediumorchid;
+          
+        }
+
+        #C-derecha{
+            height: 5vh;
+            width: 5vw;
+        }
+        .Canciones{
+            font-family: "Aoboshi One", serif;
+            font-size: 2vh;
+            height: 5vh;
+            margin: 0;
+            text-align: left;
+     
+          
+        }
+        .Notas{
+            height: 2vh;
+            width: 1vw;
+            margin: 0;
+        }
+
+        #SFT{
+           color:rgb(26, 135, 197)
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="Contenedor1">
+        <!-- Título -->
+        <div class="Cajas" id="Caja1">
+            <h1 id="JuegoJ" class="JuegoJ">ゼルダの伝説 ムジュラの仮面</h1>
+            <script>
+                const h1 = document.getElementById('JuegoJ');
+
+                h1.addEventListener('mouseover', function() {
+                    h1.textContent = "The Legend of Zelda: Majora's Mask";
+                    
+                });
+
+                h1.addEventListener('mouseout', function() {
+                    h1.textContent = 'ゼルダの伝説 ムジュラの仮面'; // Regresa al texto original
+                });
+            </script>
+            <img src="https://pa1.aminoapps.com/6347/f303d21baecbeac1127aadcbb46f7491b77feb1d_00.gif" alt="majoras mask gif" class="majorasmask">
+        </div>
+      
+
+        <!-- Contenedor principal con Links, Contenido Principal e Items -->
+        <div class="Contenedor2">
+            <!-- Links (más pequeño) -->
+            <div class="Cajas" id="Caja2">
+                <div class="contenido">
+                    <h1   id="Songs">Songs</h1>
+                    <p class="Canciones" id="SFT">Song of Time</p>
+                    <img src="https://www.zeldadungeon.net/wiki/images/thumb/7/7b/Note_C-Right_-_OOT64.png/32px-Note_C-Right_-_OOT64.png" alt="C-Derecha" class="Notas">
+                    <img src="https://www.zeldadungeon.net/wiki/images/thumb/0/0f/Note_A_-_OOT64.png/32px-Note_A_-_OOT64.png" alt="A" class="Notas">
+                    <img src="https://www.zeldadungeon.net/wiki/images/thumb/0/0d/Note_C-Down_-_OOT64.png/32px-Note_C-Down_-_OOT64.png" alt="C-Abajo" class="Notas">
+                    <img src="https://www.zeldadungeon.net/wiki/images/thumb/7/7b/Note_C-Right_-_OOT64.png/32px-Note_C-Right_-_OOT64.png" alt="C-Derecha" class="Notas">
+                    <img src="https://www.zeldadungeon.net/wiki/images/thumb/0/0f/Note_A_-_OOT64.png/32px-Note_A_-_OOT64.png" alt="A" class="Notas">
+                    <img src="https://www.zeldadungeon.net/wiki/images/thumb/0/0d/Note_C-Down_-_OOT64.png/32px-Note_C-Down_-_OOT64.png" alt="C-Abajo" class="Notas">
+                 <audio src="1-27. Ocarina ''Song of Time''.mp3" type="a"></audio>
+                    </p>
+                    <audio controls>
+                        <source src="1-27. Ocarina ''Song of Time''.mp3" type="audio/mpeg">
+                        <source src="ruta/del/audio.ogg" type="audio/ogg">
+                        Tu navegador no soporta la etiqueta de audio.
+                    </audio>
+                </div>
+            </div>
+            <!-- Contenido Principal (más grande) -->
+            <div class="Cajas" id="Caja3">
+                <div class="contenido">
+                    <h1 class="Titulo">The Legend of Zelda: Ocarina of Time</h1>
+                    <p class="par">The Legend of Zelda: Ocarina of Time (ぜるだ の でんせつ とき の おかりな, Zeruda no Densetsu Toki no Okarina ?, The Legend of Zelda Ocarina of Time (Hylian) en Hylian) es la quinta entrega de saga The Legend of Zelda, desarrollado por Nintendo Entertainment Analysis and Development,  coodesarrollado por Grezzo, y publicado por Nintendo para la Nintendo 64. El primer juego con gráficos 3D de la serie, el motor básico y modo de juego se utilizaron posteriormente en futuras entregas, incluyendo su secuela, The Legend of Zelda: Majora's Mask. 
+                        El juego comenzó una tradición en la saga de Zelda, un elemento importante o 
+                        persona del juego aparece en el título del juego.
+                    </p>
+
+                </div>
+
+
+            </div>
+            <!-- Items divididos en dos secciones: Items y Máscaras -->
+            <div class="Cajas" id="Caja5">
+                <div id="Caja5-Items">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8TTdLe0u9eo?si=80Omtu-IGNjjPju-&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <a href="wdad.html" id="mascaraslink"><P>Informacion Mascaras</P></a>
+                  
+                <div id="Caja5-Mascaras">
+                
+                    <input type="button" value="<" class="Galeria" id="Regresar">
+                  
+                    <img  src="https://www.zeldadungeon.net/wiki/images/thumb/c/c1/Deku-Mask.png/156px-Deku-Mask.png" alt="Deku Mask"  class="mascaras" id="M1">
+           
+                    <input type="button" value= ">" class="Galeria" id="Siguiente">
+                    <script>
+                        const imagenElement = document.getElementById('M1');
+                        const siguienteBoton = document.getElementById('Siguiente');
+                        const anteriorBoton = document.getElementById('Regresar');
+                        const nombreElement = document.getElementById('nombreMascara');
+                
+                        const imagenes = [
+                           
+                          
+                        'https://www.zeldadungeon.net/wiki/images/thumb/c/c1/Deku-Mask.png/156px-Deku-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/1/13/Goron-Mask.png/216px-Goron-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/1/19/Zora-Mask.png/230px-Zora-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/2/25/Fierce-Deitys-Mask.png/203px-Fierce-Deitys-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/8/8b/Great-Fairys-Mask.png/142px-Great-Fairys-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/4/4e/Kafeis-Mask.png/206px-Kafeis-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/6/6d/Bremen-Mask.png/230px-Bremen-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/8/8e/Kamaros-Mask.png/107px-Kamaros-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/5/52/Blast-Mask.png/186px-Blast-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/f/fd/Bunny-Hood.png/126px-Bunny-Hood.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/e/e3/Keaton-Mask-Model.png/144px-Keaton-Mask-Model.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/8/85/Postmans-Hat.png/230px-Postmans-Hat.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/2/29/Mask-of-Truth.png/186px-Mask-of-Truth.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/c/c7/Mask-of-Scents.png/201px-Mask-of-Scents.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/c/c5/Don-Geros-Mask.png/194px-Don-Geros-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/4/44/Romanis-Mask.png/223px-Romanis-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/c/c4/Garos-Mask.png/130px-Garos-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/6/61/Captains-Hat.png/184px-Captains-Hat.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/e/e7/Stone-Mask.png/177px-Stone-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/5/52/Troupe-Leaders-Mask.png/220px-Troupe-Leaders-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/f/f2/All-Night-Mask.png/230px-All-Night-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/9/96/Gibdo-Mask.png/227px-Gibdo-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/9/92/Couples-Mask.png/168px-Couples-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/d/dc/Giants-Mask.png/135px-Giants-Mask.png',
+                            'https://www.zeldadungeon.net/wiki/images/thumb/9/9a/Odolwas-Remains.png/184px-Odolwas-Remains.png',
+                             'https://www.zeldadungeon.net/wiki/images/1/1a/Gohts-Remains.png',
+                             'https://www.zeldadungeon.net/wiki/images/thumb/3/3a/Gyorgs-Remains.png/230px-Gyorgs-Remains.png',
+                             'https://www.zeldadungeon.net/wiki/images/9/9b/Twinmolds-Remains.png',
+                             'https://www.zeldadungeon.net/wiki/images/thumb/8/81/Moons-Mask.png/130px-Moons-Mask.png',
+                             'https://www.zeldadungeon.net/wiki/images/thumb/5/59/Suns-Mask.png/158px-Suns-Mask.png'
+
+                        ];
+                
+                        let indiceActual = 0;
+                
+                        function cambiarImagen() {
+                            imagenElement.src = imagenes[indiceActual];
+                            nombreElement.textContent = imagenes[indiceActual].nombre;
+                        }
+                
+                        siguienteBoton.onclick = () => {
+                            indiceActual = (indiceActual + 1) % imagenes.length;
+                            cambiarImagen();
+                        };
+                
+                        anteriorBoton.onclick = () => {
+                            indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+                            cambiarImagen();
+                        };
+
+                        cambiarImagen();
+                    </script>
+
+                    
+                  
+                  
+                </div>
+             
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <div class="Cajas" id="Caja7"> <img src="https://openseauserdata.com/files/0c1d81d9795c9bae27a8b7ac95768287.gif" alt="" class="linkpng"></div>
+    </div>
+</body>
+</html>

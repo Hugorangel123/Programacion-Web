@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+        <style>
+                *{
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%   ;
+        }
+        .contenedor{
+      
+            display:grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 10% 80% 10%;
+        
+            grid-template-areas:
+             "enca enca"
+            "barra conte"
+            
+            "pieg pieg"
+            ;
+        
+        }
+        
+
+        
+        .Caja1
+        {
+            border-style: solid;
+            border-color: black;
+            border-radius: 2px;
+            grid-area: enca;
+        background-color: gray;
+        
+        }
+        .Caja2{
+            border-style: solid;
+            border-color: black;
+            border-radius: 2px;
+            grid-area: barra;
+            background-color: red;
+        }
+        .Caja3{
+            border-style: solid;
+            border-color: black;
+            border-radius: 2px;
+            grid-area: conte;
+        background-color: blue;
+        }
+        
+        .Caja4{
+            border-style: solid;
+            border-color: black;
+            border-radius: 2px;
+        
+            grid-area: pieg;
+            background-color: brown;
+        }
+        
+        
+            </style>
+        </head>
+        <body>
+            <div class="contenedor">
+
+
+                <div class="Caja1">Encabezado
+
+                    <script type="text/javascript">
+                    window.PARAMS = {"gameUri":"https://5dd312fa-015f-11ea-ad56-9cb6d0d995f7.poki-gdn.com/2abbe143-c190-4a41-a68c-d7bd67437215/index.html?country=MX&ccpaApplies=0&url_referrer=https%3A%2F%2Fpoki.com%2F&tag=pg-75f1d9f88ffeba9af0e976ff3a89f5c752098ff2&site_id=52&iso_lang=es&poki_url=https%3A%2F%2Fpoki.com%2Fes%2Fg%2Fsubway-surfers&hoist=yes&nonPersonalized=n&familyFriendly=n&categories=3%2C4%2C6%2C9%2C86%2C93%2C96%2C103%2C228%2C903%2C929%2C1103%2C1126%2C1137%2C1140%2C1143%2C1147%2C1156%2C1163%2C1185%2C1190&special_condition=landing&game_id=5dd312fa-015f-11ea-ad56-9cb6d0d995f7&game_version_id=2abbe143-c190-4a41-a68c-d7bd67437215&inspector=0&csp=1","onPoki":true,"onKids":false,"isLocal":false,"gameID":"5dd312fa-015f-11ea-ad56-9cb6d0d995f7","gameVersion":"2abbe143-c190-4a41-a68c-d7bd67437215","footer":null,"canonical":"https://poki.com/en/g/subway-surfers","contentGameID":29160,"bot":{"verified":false,"score":99},"experiment":"","showLoader":false,"downloadSize":3545780,"cloudSaveGames":false,"localisations":{"playingad":"Reproduciendo anuncio","loading":"Cargando","preparing":"Preparando..."}};
+		
+                    </script>
+                </div>
+                <div class="Caja2"> Menu</div>
+                <div class="Caja3">Main </div>
+                <div class="Caja4">Pieg </div>
+
+
+            </div>
+            
+        
+        
+        </body>

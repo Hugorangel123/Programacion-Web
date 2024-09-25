@@ -538,7 +538,7 @@
                         const imagenElement = document.getElementById('M1');
                         const siguienteBoton = document.getElementById('Siguiente');
                         const anteriorBoton = document.getElementById('Regresar');
-                        const nombreElement = document.getElementById('nombreMascara');
+                      
                 
                         const imagenes = [
                            
@@ -580,7 +580,7 @@
                 
                         function cambiarImagen() {
                             imagenElement.src = imagenes[indiceActual];
-                            nombreElement.textContent = imagenes[indiceActual].nombre;
+                           
                         }
                 
                         siguienteBoton.onclick = () => {

@@ -1,0 +1,209 @@
+
+       *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+       }
+
+       .yuji-boku-regular {
+        font-family: "Yuji Boku", serif;
+        font-weight: 400;
+        font-style: normal;}
+    .aoboshi-one-regular {
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;}
+
+     table{
+       
+       
+     }
+
+       table, td{
+        border: 0.5vh solid rgb(93, 46, 201);
+        border-collapse: collapse;
+       
+       }
+
+
+
+       td{
+        font-family: "Aoboshi One", serif;
+        padding: 1vh;
+        text-align: center;
+        font-size: 2vh;
+       }
+
+
+       .Titulo{
+        font-family: "Aoboshi One", serif;
+        size:1vh;
+        text-align: center;
+   
+       }
+       .Titulo::before{
+        content: "Horario 5to Semestre";
+       }
+       .Titulo:hover::before{
+        content: "Alumno: Hugo Rangel Madrigales Carrera: Ing.Sistemas Computacionales";
+       }
+
+       
+       
+/*Materias*/
+
+        .progWeb:hover{ 
+            background-color: rgb(136, 136, 219);
+            
+        }
+        .progWeb:hover::before{
+            content:"Maestro: Gerardo Pineda Zapata Aula:A1S6";
+            display: block;
+        }
+       .TallerBD:hover::before{
+        
+        content:"Maestro: Humberto Peña Valle Aula:A1S7";
+        display: block;
+     
+       }
+       
+       #TallerBD2:hover::before{
+        content:"Maestro: Humberto Peña Valle Aula:H305";
+        display: block;
+       }
+       .TallerBD:hover{
+        background-color: chartreuse;
+       }
+
+       .SO:hover{
+        background-color: rgb(231, 37, 37);
+       }
+       .SO:hover::before{
+        content:"Maestro: Jaime David Johnston Barrientos Aula:A1S5";
+        display: block;
+       }
+       #SO2:hover::before{
+        content:"Maestro: Jaime David Johnston Barrientos Aula:H206";
+        display: block;
+       }
+       .ArquiPC:hover{
+        background-color: rgb(176, 132, 218);
+       }
+       .ArquiPC:hover::before{
+        content:"Maestro: Mario Alberto Widales Cobio Aula:A1S5";
+        display: block;
+       }
+       #ArquiPCS7:hover::before{
+        content:"Maestro: Mario Alberto Widales Cobio Aula:A1S7";
+        display: block;
+       }
+       .TeleCom:hover{
+        background-color: rgb(223, 187, 29);
+       }
+       .TeleCom:hover::before{
+        content:"Maestro: Jose Luis Sandoval Guzman Aula:A1S5";
+        display: block;
+       }
+       .IS:hover{
+        background-color: pink;
+       }
+       .IS:hover::before{
+        content:"Maestro: Maria Brenda Laura Escamilla Dominguez Aula:A1S5";
+        display: block;
+       }
+       .Graf:hover{
+        background-color: rgba(87, 88, 139, 0.651);
+       }
+       .Graf:hover::before{
+        content:"Maestro: Miguel Angel Guerrero Crespo Aula:A1S7";
+        display: block;
+       }
+       .Libres:active{
+        background-color: rgb(199, 153, 67);
+       }
+       .Libres:active::before{
+       content: "Hora Libre";
+       }
+       #LM:active::before{
+       
+        content: "Tutorias";
+       }
+       td:nth-child(1){
+        background-color: rgb(73, 132, 221);
+       }
+
+/*adaptarse a pantallas s */
+
+@media screen and (max-width:500px){
+  
+    thead, .horas td:first-child, thead td,.Libres,#ProgWEBN,#SO2,#TallerBD2,#TCN,#ArquiPCS7,#ISN,#grafN {
+        display: none; 
+    }
+  
+    table, td, tbody, tr {
+        display: block;
+        width: 100%; 
+    }
+
+    td {
+        font-size: 3vh; 
+        text-align: center;
+        padding: 1rem;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: none;
+    }
+
+
+    .Titulo {
+        font-size: 4vh;
+        padding: 1rem;
+    }
+
+    .tabla {
+        overflow: hidden;
+    }
+    #ProgWEBMEDIA:hover::before{
+        content:"Maestro: Gerardo Pineda Zapata Aula:A1S6 \ALunes-Viernes: 7:00-8:00";
+            display: block;
+            white-space: pre-wrap;
+    }
+    #TBDMEDIA:hover::before{
+        content:"Maestro: Humberto Peña Valle \A Lunes: A1S7 Jueves:H305 Horario:8:00-10:00";
+        display: block;
+        white-space: pre-wrap;
+    }
+    #SOMEDIA:hover::before{
+        content:"Maestro: Jaime David Johnston Barrientos\A Miercoles: A1S5  Viernes:H206 Horario:8:00-10:00";
+        display: block;
+        white-space: pre-wrap;
+    }
+    #ArquiMEDIA:hover::before{
+        content:"Maestro: Mario Alberto Widales Cobio \A Lunes:A1S5 11:00-01:00 Miercoles:A1S7 12:00-01:00 Viernes:A1S7 11:00-01:00  " ;
+        display: block;
+        white-space: pre-wrap;
+    }
+    #TCMEDIA:hover::before{
+        content:"Maestro: Jose Luis Sandoval Guzman \A Aula:A1S5 \A Martes: 11:00-01:00 \A Miercoles y Jueves 11:00-12:00";
+        display: block;
+        white-space: pre-wrap;
+    }
+    #ISMEDIA:hover::before{
+        content:"Maestro: Maria Brenda Laura Escamilla Dominguez Aula:A1S5 \A Lunes-Viernes: 01:00-02:00";
+        display: block;
+        white-space: pre-wrap;
+    }
+    #grafMEDIA:hover::before{
+        content:"Maestro: Miguel Angel Guerrero Crespo \A Aula:A1S7 \A Lunes-Jueves: 02:00-03:00";
+        display: block;
+        white-space: pre-wrap;
+    }
+    }
+
+
+
+

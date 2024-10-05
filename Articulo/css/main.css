@@ -1,0 +1,296 @@
+body {
+    background-image: url(https://media.tenor.com/dRAJFtYL3T4AAAAM/black-background-cool.gif);
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    width: 99vw;
+}
+.yuji-boku-regular {
+font-family: "Yuji Boku", serif;
+font-weight: 400;
+font-style: normal;
+}
+.aoboshi-one-regular {
+font-family: "Aoboshi One", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+
+
+.Contenedor1 {
+    display: grid;
+    grid-template-rows: 10vh auto 10vh; 
+    width: 100%;
+    height: 100%;
+}
+
+.Contenedor2 {
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr 1fr; 
+    width: 100%;
+    height: auto;
+}
+
+
+.Cajas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw; 
+    padding: 1vw; 
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+#Caja1 {
+    font-family: "Aoboshi One", serif;
+    height: 10vh; 
+   width: 90VW;
+
+    background-position: center;
+    background-size: 10vh;
+    
+ 
+    
+}
+
+#Caja2 {
+ 
+    height: 150vh;
+    
+    
+}
+
+#Caja3 {
+    background-color: rgb(0, 0, 0);
+    border: 0.5VH solid mediumorchid;
+    height: 150vh; 
+    overflow: AUTO;
+    width: 62VW;
+}
+
+
+#Caja5 {
+
+    height: 85vh; 
+    width: 23VW;
+    display: grid;
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px; 
+
+    
+ 
+ 
+
+}
+
+#Caja5-Items {
+    background-color: #242628; 
+    display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+    border: 1VH solid #000;
+    height: 35VH;
+    width: 20VW;
+    margin-left: 2VW;
+    border: 0.5VH solid mediumorchid;
+ 
+}
+
+#Caja5-Mascaras {
+   
+    height: 80vh; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1VH solid #000;
+    height: 30VH;
+    width: 20VW;
+    margin-left: 2VW;
+    border: 0.5VH solid mediumorchid;
+}
+
+#Caja7 {
+   
+    height: 10vh; 
+    background-position: center;
+background-size: 1vh;
+background-size: cover ;
+ background-repeat: no-repeat;
+}
+
+.Titulo{
+  
+
+    font-size: 11vh;
+ color:white;
+
+    Font-family: "Aoboshi One", serif;
+}
+
+.JuegoJ{
+    font-family: "Aoboshi One", serif;
+    font-size: 4vh;
+    height: 5vh;
+ position: absolute;
+    color:mediumorchid;
+    margin-right: 3vh;
+  
+}
+
+.JuegoJ:hover{
+    
+    margin-right:15vh; 
+}
+.majorasmask{
+    width: 10vw;
+    height: 13vh;
+    margin-left: 70vh;
+}
+
+#Regresar{
+   margin-right: 10vh;
+   width: 10vw;
+    height: 10vh;
+    background: black;
+    font-size: 5vh;
+    color:white;
+    font-family:fantasy;
+}
+#Siguiente{
+    margin-left: 10vh;
+   width: 10vw;
+    height: 10vh;
+   background: black;
+   font-size: 5vh;
+   color:white;
+   font-family:fantasy;
+}
+
+.mascaras{
+    height: 15vh;
+    width: 15vh;
+}
+
+
+#mascaraslink{
+  
+    height: 5vh;
+    width: 16vw;
+margin-left: 5vw;
+    margin-bottom: 5vh;
+   font-size: 3vh;
+   color:mediumorchid;
+   font-family: "Aoboshi One", serif;
+} 
+.linkpng{
+    width: 10vw;
+    height: 10vh;
+
+}
+#Songs{
+    font-family: "Aoboshi One", serif;
+    font-size: 4vh;
+    height: 5vh;
+
+    color:mediumorchid;
+  
+}
+
+#C-derecha{
+    height: 5vh;
+    width: 5vw;
+}
+.Canciones{
+    font-family: "Aoboshi One", serif;
+    font-size: 2vh;
+    height: 5vh;
+    margin: 0;
+    text-align: left;
+
+  
+}
+.Notas{
+    height: 2vh;
+    width: 1vw;
+    margin: 0px;
+}
+
+
+#Video{
+    height: 30vh;
+    width: 30vw;
+    
+}
+.Audio{
+    height: 3vh;
+    width: 10vw;
+    margin: 0px;
+    
+  
+}
+
+.contenido{
+   height: 150vh;
+}
+.par{
+    font-size: 2.5vh;
+   color:white;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-align: justify;
+}
+
+.tablita{
+    float: right;
+    border: 1VH solid #000;
+    height: 5VH;
+    width: 20VW;
+    border: 0.5VH solid mediumorchid;
+    background-color:mediumorchid; ;
+    border-radius: 2vh;
+    margin-left: 2vw;
+   margin-top: 2vh;
+}
+.TituloS{
+font-family: "Aoboshi One", serif;
+font-size: 4vh;
+color:#f1c40f;
+}
+/* Ajustar el iframe y hacer el contenedor responsivo */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Esconder el logo de YouTube y el título (si es necesario) */
+#Video {
+    pointer-events: none; /* Esto evita que el logo de YouTube sea clickeable */
+}
+
+/* Esconder elementos del video en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #Video {
+        height: 100%;
+        width: 100%;
+    }
+}
+/* Para hacer los controles de audio adaptativos */
+audio {
+    width: 100%;
+    max-width: 100%;
+}

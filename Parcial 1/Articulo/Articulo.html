@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
 
     <style>
         .noto-sans-warang-citi-regular {
@@ -14,6 +16,12 @@
   font-weight: 400;
   font-style: normal;
 }
+
+    .aoboshi-one-regular {
+  font-family: "Aoboshi One", serif;
+  font-weight: 400;
+  font-style: normal;
+    }
 
 
         *{
@@ -54,7 +62,7 @@
 
         .Titulo{
             text-align: center;
-        font-family:"Noto Sans Warang Citi", sans-serif;
+            font-family: "Aoboshi One", serif;
        
 
         color: white;
@@ -225,15 +233,34 @@
        }
 
 
+       @media screen and (max-width:500px){
+        #TABLA{
+        display: none;
+       }
+       }
+    
+
     </style>
 </head>
 <body>
     
 
     
-<div class="contenedor1">
-    <h1 class="Titulo">The Legend of Zelda: Ocarina of Time</h1>
-<div class="contenedor2">
+<div class="contenedor1" >
+    <h1 id="TituloJ" class="Titulo" style="color:#f1c40f">ぜるだ の でんせつ とき の おかりな</h1>
+    <script>
+        const h1 = document.getElementById('TituloJ');
+
+        h1.addEventListener('mouseover', function() {
+            h1.textContent = "The Legend of Zelda: Ocarina of Time";
+            
+        });
+
+        h1.addEventListener('mouseout', function() {
+            h1.textContent = 'ぜるだ の でんせつ とき の おかりな'; // Regresa al texto original
+        });
+    </script>
+<div class="contenedor2" id="TABLA">
     <div class="contenedor3">
             <img src="https://i.pinimg.com/originals/56/2e/45/562e457ef65d7a9c4b98e875b0bbef9d.gif" alt="Trifuerza" id="tri">
             <h1 class="TC">The Legend Of Zelda Ocarina Of Time <BR>N64 LOGO</BR>
@@ -432,6 +459,7 @@
     Link, una vez que hubo despertado de su desmayo, recoge la Ocarina del Tiempo y abre la puerta al Reino Sagrado con las Piedras Espirituales y la "Canción del Tiempo". En el interior, se encuentra la Espada Maestra, una legendaria espada con el poder de repeler el mal. Sin embargo, cuando saca la espada del Pedestal del Tiempo, rompe la última barrera para acceder al Reino Sagrado, y por lo tanto, a la Trifuerza. Ganondorf, consciente de su plan desde el principio, entra en el Reino Sagrado y toca la Trifuerza. La poderosa reliquia reconoce los deseos del corazón malvado de Ganondorf y convierte la tierra generosa de Hyrule en una tierra maldita llena de monstruos al servicio de Ganondorf.
  </p>
 
+ 
 </div>
 
 

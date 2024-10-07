@@ -1,296 +1,237 @@
-body {
-    background-image: url(https://media.tenor.com/dRAJFtYL3T4AAAAM/black-background-cool.gif);
-    margin: 0;
-    display: flex;
-    height: 100vh;
-    width: 99vw;
-}
-.yuji-boku-regular {
-font-family: "Yuji Boku", serif;
-font-weight: 400;
-font-style: normal;
-}
-.aoboshi-one-regular {
-font-family: "Aoboshi One", serif;
-font-weight: 400;
-font-style: normal;
-}
-
-
-
-.Contenedor1 {
-    display: grid;
-    grid-template-rows: 10vh auto 10vh; 
-    width: 100%;
-    height: 100%;
-}
-
-.Contenedor2 {
-    display: grid;
-    grid-template-columns: 0.5fr 2.5fr 1fr; 
-    width: 100%;
-    height: auto;
-}
-
-
-.Cajas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2vw; 
-    padding: 1vw; 
-    box-sizing: border-box;
-    border: 1px solid black;
-}
-
-#Caja1 {
+.noto-sans-warang-citi-regular {
+    font-family: "Noto Sans Warang Citi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+      .aoboshi-one-regular {
     font-family: "Aoboshi One", serif;
-    height: 10vh; 
-   width: 90VW;
+    font-weight: 400;
+    font-style: normal;
+      }
+  
+  
+          *{
+              box-sizing: border-box;
+              margin: 0;
+              padding: 0;
+  
+              
+  
+          }
+  
+          body{
+          
+             background-image: url(https://31.media.tumblr.com/tumblr_m1u35vcQGx1r4dgyeo1_500.gif)
+          }
+              
+          
+          #logo{
+  
+              margin:12px;
+              float: right;
+              height: 200px;
+              width: 200px;
+              border-radius: 30px;
+             
+          
+             
+          }
+  
+  
+          .par{
+          margin: 0 auto;
+          font-family: "Noto Sans Warang Citi", sans-serif;
+          text-align: justify;
+          color: whitesmoke;
+          margin: 10px;
+          }
+  
+          .Titulo{
+              text-align: center;
+              font-family: "Aoboshi One", serif;
+         
+  
+          color: white;
+          }
+          .contenedor1{
+              
+              background-color: rgb(14, 25, 26);
+              margin: 0 auto;
+              height: 2700px;
+              width: 1000px;
+              border-color: yellow ;
+              border-style: solid;
+              border-width: 2px;
+              clear: both;
+  
+         
+          }
+          .contenedor2{
+              float: right;
+             border-color: rgb(201,38,38);
+             border-style: solid;
+              border-width: 2px;
+              width: 230px;
+              height: 1230px;
+              margin:10px;
+          }
+          .contenedor3{
+              background-color: rgb(233, 68, 68);
+              margin: 0 auto;
+  
+              height: 50px;
+              width: 230px;
+          }
+          .TC{
+              text-align: center;
+          font-family:"Noto Sans Warang Citi", sans-serif;
+          font-size: 13px;
+         
+  
+          }
+  
+         #tri{
+          float: right;
+          height: 35px;
+          width: 35px;
+  
+         }
+  
+         #link{
+          float: left;
+          height: 200px;
+          width:200px;
+         }
+         #link:hover{
+         
+         
+            background-image: url(/Articulo/img/link\ super.gif);
+         background-size: 50vh;
+         background-repeat: no-repeat;
+         background-position-x: -100px;
+         background-position-y: -120px;
+          
+          
+         }
 
-    background-position: center;
-    background-size: 10vh;
-    
- 
-    
-}
-
-#Caja2 {
- 
-    height: 150vh;
-    
-    
-}
-
-#Caja3 {
-    background-color: rgb(0, 0, 0);
-    border: 0.5VH solid mediumorchid;
-    height: 150vh; 
-    overflow: AUTO;
-    width: 62VW;
-}
-
-
-#Caja5 {
-
-    height: 85vh; 
-    width: 23VW;
-    display: grid;
-    grid-template-rows: 1fr 1fr; 
-    gap: 0px; 
-
-    
- 
- 
-
-}
-
-#Caja5-Items {
-    background-color: #242628; 
-    display: flex;
- 
-    align-items: center;
-    justify-content: center;
-    border: 1VH solid #000;
-    height: 35VH;
-    width: 20VW;
-    margin-left: 2VW;
-    border: 0.5VH solid mediumorchid;
- 
-}
-
-#Caja5-Mascaras {
-   
-    height: 80vh; 
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1VH solid #000;
-    height: 30VH;
-    width: 20VW;
-    margin-left: 2VW;
-    border: 0.5VH solid mediumorchid;
-}
-
-#Caja7 {
-   
-    height: 10vh; 
-    background-position: center;
-background-size: 1vh;
-background-size: cover ;
- background-repeat: no-repeat;
-}
-
-.Titulo{
+     
+         #N64{
+          float: right;
+          height: 125px;
+          width:250px;
+          margin: 10px;
+         }
+         
+  
+         #linkni{
+          float: right;
+          height: 200px;
+          width:200px;
+          margin: 10px;
+         }
+  
+         #arboldeku{
+          float: left;
+          height: 200px;
+          width:200px;
+          margin: 10px;
+         }
+         #mastermeme{
+          float: right;
+          height: 200px;
+          width:200px;
+          margin: 10px;
+         }
+  
+         #linklentes{
+          float:left;
+          height: 200px;
+          width:200px;
+          margin: 10px;
+         }
+  
+         .contenedorT{
+             
+              margin: 0 auto;
+              border-color: rgb(201,38,38);
+             border-style: solid;
+              border-width: 3px;
+  
+              height: 240px;
+              width: 230px;
+          }
+  
+          #C4{
+  
+  
+              height: 70px;
+              width: 230px;
+              background-color:#060A0A ;
+          }
+  
+          #C5{
+              height: 30px;
+              width: 230px;
+  
+          }
+  
+          p{
+             font-family: "Noto Sans Warang Citi", sans-serif;
+          }
+         .amar{
+          color: yellow;
+         }
+  
+       
+  
+         #C6{
+          Background-color:#060A0A;
+          height: 160px;
+              width: 230px;
+         }
+  
+         #C7{
+          height: 310px;
+          width: 230px;
+         }
+  
+         .bandera{
+         margin:  0%auto;
+         clear: both;
+  
+          height: 20px;
+          width: 30px;
+         }
+  
+         #C8{
+          height: 30px;
+          width: 230px;
+          background-color: #060A0A;
+         }
+  
+         #C9{
+          height: 144px;
+          width: 230px;
+         }
+  
+         #C10{
+  
+           height: 122px;
+          width: 230px;
+          background-color: #060A0A;
+         }
+  
+         #C11{
+          height: 50px;
+          width: 230px;
+         }
+         #C12{
+          height: 50px;
+          width: 230px;
+          background-color: #060A0A;
+         }
+  
   
 
-    font-size: 11vh;
- color:white;
-
-    Font-family: "Aoboshi One", serif;
-}
-
-.JuegoJ{
-    font-family: "Aoboshi One", serif;
-    font-size: 4vh;
-    height: 5vh;
- position: absolute;
-    color:mediumorchid;
-    margin-right: 3vh;
-  
-}
-
-.JuegoJ:hover{
-    
-    margin-right:15vh; 
-}
-.majorasmask{
-    width: 10vw;
-    height: 13vh;
-    margin-left: 70vh;
-}
-
-#Regresar{
-   margin-right: 10vh;
-   width: 10vw;
-    height: 10vh;
-    background: black;
-    font-size: 5vh;
-    color:white;
-    font-family:fantasy;
-}
-#Siguiente{
-    margin-left: 10vh;
-   width: 10vw;
-    height: 10vh;
-   background: black;
-   font-size: 5vh;
-   color:white;
-   font-family:fantasy;
-}
-
-.mascaras{
-    height: 15vh;
-    width: 15vh;
-}
-
-
-#mascaraslink{
-  
-    height: 5vh;
-    width: 16vw;
-margin-left: 5vw;
-    margin-bottom: 5vh;
-   font-size: 3vh;
-   color:mediumorchid;
-   font-family: "Aoboshi One", serif;
-} 
-.linkpng{
-    width: 10vw;
-    height: 10vh;
-
-}
-#Songs{
-    font-family: "Aoboshi One", serif;
-    font-size: 4vh;
-    height: 5vh;
-
-    color:mediumorchid;
-  
-}
-
-#C-derecha{
-    height: 5vh;
-    width: 5vw;
-}
-.Canciones{
-    font-family: "Aoboshi One", serif;
-    font-size: 2vh;
-    height: 5vh;
-    margin: 0;
-    text-align: left;
-
-  
-}
-.Notas{
-    height: 2vh;
-    width: 1vw;
-    margin: 0px;
-}
-
-
-#Video{
-    height: 30vh;
-    width: 30vw;
-    
-}
-.Audio{
-    height: 3vh;
-    width: 10vw;
-    margin: 0px;
-    
-  
-}
-
-.contenido{
-   height: 150vh;
-}
-.par{
-    font-size: 2.5vh;
-   color:white;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   text-align: justify;
-}
-
-.tablita{
-    float: right;
-    border: 1VH solid #000;
-    height: 5VH;
-    width: 20VW;
-    border: 0.5VH solid mediumorchid;
-    background-color:mediumorchid; ;
-    border-radius: 2vh;
-    margin-left: 2vw;
-   margin-top: 2vh;
-}
-.TituloS{
-font-family: "Aoboshi One", serif;
-font-size: 4vh;
-color:#f1c40f;
-}
-/* Ajustar el iframe y hacer el contenedor responsivo */
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-    height: 0;
-    overflow: hidden;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Esconder el logo de YouTube y el título (si es necesario) */
-#Video {
-    pointer-events: none; /* Esto evita que el logo de YouTube sea clickeable */
-}
-
-/* Esconder elementos del video en pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    #Video {
-        height: 100%;
-        width: 100%;
-    }
-}
-/* Para hacer los controles de audio adaptativos */
-audio {
-    width: 100%;
-    max-width: 100%;
-}
+      

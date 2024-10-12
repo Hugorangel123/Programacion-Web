@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Cowsay</title>
+    <title>Hola Mundo</title>
 </head>
 <body>
+    <button type="button" id="Boton Imprimir" onclick="alert('Hola')">Imprimir Hola</button>
+    <button type="button" id="Suma">Suma</button>
+    <button type="button" id="HolaM">Hola Mundo</button>
+
+    <script>
+        const Boton = document.getElementById('Suma');
+
+        Boton.onclick = () => {
+            alert("Se realizó una suma");
+            console.log("Resultado: " + (10 + 5)); 
+        };
+    </script>
+
+    
+<script>
+    const BotonH = document.getElementById('HolaM');
+
+    BotonH.onclick = () => {
+        alert("Hola 🤠 ");
+        
+    };
+</script>
+
+
     
 </body>
 </html>

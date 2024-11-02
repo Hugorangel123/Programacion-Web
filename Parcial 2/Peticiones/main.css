@@ -15,16 +15,19 @@
     font-style: normal;
   }
   
-
+  @font-face {
+    font-family: 'South';
+    src: url('../Peticiones/Fuentes/south\ park.ttf') format('truetype');
+}
   body{
-   
+   background-image: url(https://virtualbackgrounds.site/wp-content/uploads/2022/03/south-park-bus-stop.jpg);
   }
 
 #Titulo{
-font-family: "Sixtyfour Convergence";
+    font-family: 'South';
 }
 #Titulo2{
-    font-family: "Sixtyfour Convergence";
+    font-family: 'South';
     justify-content: center;
     display: flex;
 }
@@ -34,12 +37,12 @@ font-family: "Sixtyfour Convergence";
 }
 
 .Categ{
-    color: peru;
+    color:black;
     font-family: "Varela Round", sans-serif;
 }
 
 .Categ:hover{
-    color:black;
+    color:red;
 }
 .Categorias{
    
@@ -83,7 +86,7 @@ font-family: "Sixtyfour Convergence";
     align-items: flex-start;
     gap: 20px;
     position: relative;
-    margin-top: 20px; /* Ajusta el valor según sea necesario para despejar las opciones */
+    margin-top: 20px; 
 }
 
 .momo {
@@ -102,33 +105,37 @@ font-family: "Sixtyfour Convergence";
 #imagen {
     width: 30vw;
     height: 30vh;
-    margin-top: 15vh;
-    margin-left: 20vw;
+    margin-top: 35vh;
+    margin-left: 30vw;
 }
 
 .globo-container {
     position: relative;
-    width: 30vw; /* Ajusta al tamaño del globo */
-    height: 30vh; /* Ajusta al tamaño del globo */
+    width: 30vw; 
+    height: 30vh; 
+    margin-top: 5vh;
+
+    float: left;
 }
 
 .iglobo {
-    width: 100%; 
-    height: 100%;
+    width: 120%; 
+    height: 120%;
+    
 }
 
 #tex {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el texto vertical y horizontalmente */
-    width: 80%; /* Ajusta el ancho al 80% del contenedor */
-    font-size: 1.3vh; /* Tamaño de fuente ajustable */
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%); 
+    width: 80%; 
+    font-size: 1.55vh; 
     text-align: center;
     font-family: "Varela Round", sans-serif;
-    line-height: 1.4; /* Aumenta el espacio entre líneas si el texto es muy largo */
-    white-space: pre-line; /* Permite saltos de línea si hay demasiadas líneas de texto */
-    overflow-wrap: break-word; /* Permite el salto de línea en palabras largas */
+    line-height: 1.4;
+    white-space: pre-line; 
+    overflow-wrap: break-word; 
 }
 
 .consultas{
@@ -136,3 +143,11 @@ font-family: "Sixtyfour Convergence";
     justify-content: center;
 }
 
+
+.BotonesRequest{
+    font-family: 'South';
+    color:rgb(254, 197, 21);
+    background-color:gray;
+    width: 5vw;
+    height: 5vh;
+}

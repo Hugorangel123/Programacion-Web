@@ -63,10 +63,10 @@
     <div class="consultas">
         
         
-        <button onclick="fetchRequest()">Fetch</button>
-        <button onclick="xmlHttpRequest()">XMLHTML</button>
-        <button onclick="jQueryRequest()">jQUERY </button>
-        <button onclick="asyncRequest()">Async</button>
+        <button onclick="fetchRequest()" class="BotonesRequest">Fetch</button>
+        <button onclick="xmlHttpRequest()" class="BotonesRequest">XMLHTML</button>
+        <button onclick="jQueryRequest()" class="BotonesRequest">jQuery </button>
+        <button onclick="asyncRequest()" class="BotonesRequest">Async</button>
 
     </div>
 
@@ -93,13 +93,13 @@
     <script>
 
 const comediantes = [
-    'https://media.baamboozle.com/uploads/images/233344/1646103530_650659_gif-url.gif',
-    'https://media.tenor.com/7Trdwp-4ZBkAAAAj/clap-kenny-mccormick.gif',
-    'https://media.tenor.com/bhO98cNWIpQAAAAj/thank-you-kyle-broflovski.gif',
-    'https://media1.giphy.com/media/H7wniUtiBMx7BXCian/200w.gif?cid=82a1493bgp5zwezxq2kwlhm5cqurm04nyj6t4yynr8smy0w8&ep=v1_gifs_related&rid=200w.gif&ct=s',
-    'https://media1.giphy.com/media/Yw6V9HA4Q1ceQ/source.gif',
-    'https://media.tenor.com/T_096L738OkAAAAj/scared-tolkien.gif',
-    'https://media.tenor.com/IEggxGl4JIsAAAAj/laughing-towelie.gif',
+    'https://media.tenor.com/hNqqD05YwpEAAAAi/laughing-eric-cartman.gif',
+    'https://media.tenor.com/DZ2kuPux1GkAAAAj/shrug-kenny-mccormick.gif',
+    'https://media.tenor.com/686qibxeQIcAAAAi/what-kyle-broflovski.gif',
+    'https://media.tenor.com/6jQ7-EBTUSYAAAAi/laughing-butters-stotch.gif',
+    'https://media.tenor.com/JXNZN2jpCOMAAAAi/annoyed-stan-marsh.gif',
+    'https://media.tenor.com/PzFv-lJBLZgAAAAi/confused-tolkien-black.gif',
+    'https://media.tenor.com/QksSXABNP90AAAAi/what-towelie.gif',
     ]
 
 let indiceActual = -1; 
@@ -119,7 +119,7 @@ function getRandomInt() {
             img.style.justifyContent="center";
             img.alt="Comediante"
           
-            
+            img.alt="Comediante";
             img.style.width="30vw";
             img.style.height="30vh"
            

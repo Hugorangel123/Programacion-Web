@@ -1,0 +1,138 @@
+.sixtyfour-convergence- {
+    font-family: "Sixtyfour Convergence", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0,
+      "XELA" 0,
+      "YELA" 0;
+  }
+  .varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  body{
+   
+  }
+
+#Titulo{
+font-family: "Sixtyfour Convergence";
+}
+#Titulo2{
+    font-family: "Sixtyfour Convergence";
+    justify-content: center;
+    display: flex;
+}
+
+.Titulo{
+    text-align: center;
+}
+
+.Categ{
+    color: peru;
+    font-family: "Varela Round", sans-serif;
+}
+
+.Categ:hover{
+    color:black;
+}
+.Categorias{
+   
+    display: flex;
+    justify-content:center;
+    font-family: "Varela Round", sans-serif;
+}
+
+.Idioma{
+    display: flex;
+    justify-content:center;
+    font-family: "Varela Round", sans-serif;
+}
+
+.Banderas{
+    display: flex;
+    justify-content:center;
+    font-family: "Varela Round", sans-serif;
+    color:brown;
+}
+
+
+
+#tipo{
+
+    display: flex;
+    justify-content:center;
+    font-family: "Varela Round", sans-serif;
+}
+
+.Band:hover{
+    color:red;
+    
+}
+
+
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    margin-top: 20px; /* Ajusta el valor según sea necesario para despejar las opciones */
+}
+
+.momo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+#comediante {
+    display: flex;
+    justify-content: center;
+}
+
+#imagen {
+    width: 30vw;
+    height: 30vh;
+    margin-top: 15vh;
+    margin-left: 20vw;
+}
+
+.globo-container {
+    position: relative;
+    width: 30vw; /* Ajusta al tamaño del globo */
+    height: 30vh; /* Ajusta al tamaño del globo */
+}
+
+.iglobo {
+    width: 100%; 
+    height: 100%;
+}
+
+#tex {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto vertical y horizontalmente */
+    width: 80%; /* Ajusta el ancho al 80% del contenedor */
+    font-size: 1.3vh; /* Tamaño de fuente ajustable */
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+    line-height: 1.4; /* Aumenta el espacio entre líneas si el texto es muy largo */
+    white-space: pre-line; /* Permite saltos de línea si hay demasiadas líneas de texto */
+    overflow-wrap: break-word; /* Permite el salto de línea en palabras largas */
+}
+
+.consultas{
+    display: flex;
+    justify-content: center;
+}
+

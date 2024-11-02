@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHISTES API 😁😁😁☎️👀</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Danfo&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Danfo&family=Sixtyfour+Convergence&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../Peticiones/main.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="Titulo">
+        <h2 id="Titulo">Seleccione las opciones para el Chiste </h2>
+    </div>
+   
+    
+    
+    <div class="Categorias">
+        <label>
+            <input type="radio" name="category" value="Any" checked onclick="categorias(false)"> Todos
+        </label>
+        <label>
+            <input type="radio" name="category" value="Custom" onclick="categorias(true)"> Categorías:
+        </label>
+        <label class="Categ"><input  type="checkbox" name="customCategory" value="Programming" disabled> Programación</label>
+        <label class="Categ"><input type="checkbox" name="customCategory" value="Miscellaneous" disabled> Misceláneo</label>
+        <label class="Categ"><input type="checkbox" name="customCategory" value="Dark" disabled> Oscuro👀</label>
+        <label class="Categ"><input type="checkbox" name="customCategory" value="Pun" disabled> Retórico</label>
+        <label class="Categ"><input type="checkbox" name="customCategory" value="Spooky" disabled> Espeluznante</label>
+        <label class="Categ"><input type="checkbox" name="customCategory" value="Christmas" disabled> Navidad</label>
+    </div>
+
+    <div class="Idioma">
+        <label for="language">Idioma:</label>
+        <select id="language">
+            <option value="en">en - Inglés</option>
+            <option value="es">es - Español</option>
+            <option value="cs">cs - Checo</option>
+            <option value="de">de - Alemán</option>
+            <option value="fr">fr - Francés</option>
+            <option value="pt">pt - Portugués</option>
+        </select>
+  
+    </div>
+
+    <p id="tipo">Tipo: </p>
+    <div class="Banderas">
+        
+        <label class="Band"><input type="checkbox" name="flag" value="nsfw">nsfw</label>
+        <label class="Band"><input type="checkbox" name="flag" value="religious"> Religioso</label>
+        <label class="Band"><input type="checkbox" name="flag" value="political"> Político</label>
+        <label class="Band"><input type="checkbox" name="flag" value="racist"> Racista</label>
+        <label class="Band"><input type="checkbox" name="flag" value="sexist"> Sexista</label>
+        <label class="Band"><input type="checkbox" name="flag" value="explicit"> Explícito</label>
+    </div>
+    <h2 id="Titulo2">Seleccione su metodo de consulta </h2>
+    <div class="consultas">
+        
+        
+        <button onclick="fetchRequest()">Fetch</button>
+        <button onclick="xmlHttpRequest()">XMLHTML</button>
+        <button onclick="jQueryRequest()">jQUERY </button>
+        <button onclick="asyncRequest()">Async</button>
+
+    </div>
+
+    
+
+   
+    <div class="momo">
+        <div id="comediante">
+            <img id="imagen" src="" alt="">
+        </div>
+        <div class="globo">
+            <div class="globo-container">
+                <img src="https://i.pinimg.com/originals/70/a1/2e/70a12ef715c0c73145deff6a40b1fc0b.png" alt="Globo de texto" class="iglobo">
+                <div class="momotex">
+                    <p id="tex"><br></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+    
+   
+    <script>
+
+const comediantes = [
+    'https://media.baamboozle.com/uploads/images/233344/1646103530_650659_gif-url.gif',
+    'https://media.tenor.com/7Trdwp-4ZBkAAAAj/clap-kenny-mccormick.gif',
+    'https://media.tenor.com/bhO98cNWIpQAAAAj/thank-you-kyle-broflovski.gif',
+    'https://media1.giphy.com/media/H7wniUtiBMx7BXCian/200w.gif?cid=82a1493bgp5zwezxq2kwlhm5cqurm04nyj6t4yynr8smy0w8&ep=v1_gifs_related&rid=200w.gif&ct=s',
+    'https://media1.giphy.com/media/Yw6V9HA4Q1ceQ/source.gif',
+    'https://media.tenor.com/T_096L738OkAAAAj/scared-tolkien.gif',
+    'https://media.tenor.com/IEggxGl4JIsAAAAj/laughing-towelie.gif',
+    ]
+
+let indiceActual = -1; 
+function getRandomInt() {
+    let nuevoIndice;
+    do {
+        nuevoIndice = Math.floor(Math.random() * comediantes.length); 
+    } while (nuevoIndice === indiceActual); 
+    return nuevoIndice;
+}
+
+        function Imagenes() {
+            indiceActual = getRandomInt();
+            const img = document.getElementById("imagen");
+            img.src = comediantes[indiceActual]; 
+            img.style.display = "flex"; 
+            img.style.justifyContent="center";
+            img.alt="Comediante"
+          
+            
+            img.style.width="30vw";
+            img.style.height="30vh"
+           
+            
+        }
+    </script>
+    <script>
+        function categorias(enable) {
+            const checkboxes = document.querySelectorAll('input[name="customCategory"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.disabled = !enable;
+                if (!enable) checkbox.checked = false; 
+            });
+        }
+
+function GenerarURL() {
+    let baseURL = "https://v2.jokeapi.dev/joke/";
+    let categoria = document.querySelector('input[name="category"]:checked').value;
+
+    if (categoria === "Custom") {
+        let categoriasSelec = Array.from(document.querySelectorAll('input[name="customCategory"]:checked'))
+            .map(checkbox => checkbox.value);
+        categoria = categoriasSelec.length > 0 ? categoriasSelec.join(",") : "Any";
+    }
+    
+    let lenguaje = document.getElementById("language").value;
+    let banderas = Array.from(document.querySelectorAll('input[name="flag"]:checked'))
+        .map(checkbox => checkbox.value);
+    let banderas2 = banderas.length > 0 ? `&blacklistFlags=${banderas.join(",")}` : "";
+    return `${baseURL}${categoria}?lang=${lenguaje}${banderas2}`;
+}
+
+function mostrarResultado(data) {
+    Imagenes();
+    const p = document.getElementById("tex");
+    if (data.type === "single") {
+        p.innerText = data.joke;
+    } else if (data.type === "twopart") {
+        p.innerText = `${data.setup}\n\n${data.delivery}`;
+    }
+}
+
+function fetchRequest() {
+    const apiURL = GenerarURL();
+    fetch(apiURL)
+        .then(response => response.json())
+        .then(data => mostrarResultado(data))
+        .catch(error => console.error("Error con Fetch:", error));
+}
+
+
+async function asyncRequest() {
+    const apiURL = GenerarURL();
+    try {
+        const response = await fetch(apiURL);
+        const data = await response.json();
+        mostrarResultado(data);
+    } catch (error) {
+        console.error("Error con Async/Await:", error);
+    }
+}
+
+function xmlHttpRequest() {
+    const apiURL = GenerarURL();
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", apiURL, true);
+    xhr.responseType = "json";
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            mostrarResultado(xhr.response);
+        } else {
+            console.error("Error con XMLHttpRequest:", xhr.statusText);
+        }
+    };
+    xhr.onerror = function () {
+        console.error("Error con XMLHttpRequest:", xhr.statusText);
+    };
+    xhr.send();
+}
+
+
+        function jQueryRequest() {
+            const apiURL = GenerarURL();
+            $.ajax({
+                url: apiURL,
+                method: "GET",
+                dataType: "json",
+                success: function (data) {
+                    mostrarResultado(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error("Error con jQuery:", textStatus, errorThrown);
+                }
+            });
+}
+    </script>
+
+    <!-- <script>
+
+import $ from 'jquery';
+
+function jQueryRequest() {
+    const apiURL = GenerarURL();
+    $.ajax({
+        url: apiURL,
+        method: "GET",
+        dataType: "json",
+        success: function (data) {
+            mostrarResultado(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Error con jQuery:", textStatus, errorThrown);
+        }
+    });}
+    </script>  no funciona --> 
+</body>
+</html>

@@ -19,12 +19,12 @@ app.get('/Estudiantes', (req, res) => {
 
 app.get('/Maestros', (req, res) => {
     console.info(req.body)
-     res.send(`Maestros`)
+     res.render(`Maestros`)
  })
 
 app.get('/Maestros/:id', (req, res) => {
     console.info(req.params.id)
-     res.send(`Maestro con id ${req.params.id}`)
+     res.render(`Maestro con id ${req.params.id}`)
  })
 
    

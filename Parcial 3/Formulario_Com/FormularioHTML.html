@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <form id="Formulario" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="apellido">Apelldio:</label>
+        <input Type="text" id="apellido" name="apellido" required>
+        <label for="Archivo">Archivo</label>
+        <input type="file" name="Archivo" id="Archivo">
+        <button  id="btnEnviar" type="submit" onclick="Peticion()">Generar PDF</button>
+      </form>
+
+
+      <script>
+
+        document.getElementById('btnEnviar').addEventListener("click", async () => {
+            const formElement = document.getElementById('Fomulario');
+            const formData = new FormData(formElement); 
+
+            try {
+                const response = await fetch('http://localhost:4000/usuario', {
+                    method: 'POST',
+                    body: formData, 
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error en la solicitud: ${response.status}`);
+                }
+
+                alert('PDF generado exitosamente. Revisa la carpeta del servidor.');
+            } catch (error) {
+                console.error('Error al enviar datos:', error);
+                alert('Error al generar el PDF.');
+            }
+        });
+        
+    </script>
+  
+    
+</body>
+</html>

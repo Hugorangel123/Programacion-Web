@@ -1,12 +1,12 @@
 const express = require('express');
-const multer = require('multer');
 const path = require('path');
-const app = express();
 const cors = require('cors');
-const { jsPDF } = require("jspdf");
+const multer = require('multer');
 const fs = require('fs');
+const { jsPDF } = require("jspdf");
+const { check, validationResult } = require('express-validator')
 
-
+const app = express();
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -18,65 +18,85 @@ const storage = multer.diskStorage({
 });
 
 
-const upload = multer({ storage: storage })
-app.use(cors());
+
+
+const upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+      const ext = path.extname(file.originalname).toLowerCase();
+      if (ext !== '.png') {
+          return cb(new Error('Solo se permiten archivos PNG.'));
+      }
+      cb(null, true);
+  }
+});
 
 app.use(express.json());
-app.use(express.text());
-app.use(upload.single('Archivo')); 
+app.use(cors());
 
-
-
-// app.post('/usuario',(req,res) => {
-// console.log(req.body)
-
-
-// const doc = new jsPDF();
-// doc.text(`Hola ${req.body.nombre}`, 10, 10);
-// doc.save( path.join(__dirname+'/archivoss/a4.pdf'));
-
-// res.sendFile((__dirname+'/archivoss/a4.pdf'))
-// });
-
-// app.post('/usuario', (req, res) => {
-//   const doc = new jsPDF();
-//   doc.text(`Hola ${req.body.nombre || "Usuario"} ${req.body.apellido}`, 10, 10);
-//   const pdfBuffer = doc.output('arraybuffer'); // Generar buffer del PDF
-//   res.setHeader('Content-Type', 'application/pdf');
-//   res.send(Buffer.from(pdfBuffer)); // Enviar el PDF directamente
-
+app.post(
+    '/usuario',
+    upload.single('imagen'),
+    [
+      check('edad', 'La edad debe ser numerica: 1234').isNumeric(),
+      check('edad', 'Casilla vacia').notEmpty(),
+      check('nombre', 'Casilla vacia').notEmpty(),
+      check('correo', 'Casilla vacia').notEmpty(),
+      check('correo', 'Este correo es').isEmail(),
+    ],
+    (req, res) => {
+      const result = validationResult(req);
   
-// });
+      if (result.isEmpty()) {
+        const { nombre, edad, correo } = req.body;
+        const imagenPath = req.file ? req.file.path : null;
+  
+        const doc = new jsPDF();
+  
+        const Ancho = doc.internal.pageSize.getWidth();
+        const x = Ancho / 2;
+  
+        doc.setFont('helvetica', 'normal');
+  
+        doc.setFontSize(16);
+        doc.text('Datos:', 10, 10);
+  
+        doc.setFontSize(12);
+        doc.text(`Nombre: ${nombre}`, 10, 30);
+        doc.text(`Edad: ${edad} años`, 10, 40);
+        doc.text(`Correo: ${correo}`, 10, 50);
+  
+        if (imagenPath) {
+          const imgData = fs.readFileSync(imagenPath, 'base64');
+          const imgBase64 = `data:image/png;base64,${imgData}`;
+  
+          const imageX = 140;
+          const imageY = 10;
+          const imageWidth = 50;
+          const imageHeight = 50;
+  
+          doc.addImage(imgBase64, 'PNG', imageX, imageY, imageWidth, imageHeight);
+        }
+  
+        doc.text(':D', 10, 80);
+  
+    
+        const pdfData = doc.output(); 
+        res.setHeader('Content-Type', 'application/pdf');
+        res.send(Buffer.from(pdfData, 'binary'));
+      } else {
+        res.status(400).json({ errors: result.array() });
+        if (req.file) {
+          fs.unlinkSync(req.file.path);
+        }
+      }
+    }
+  );
+  
 
-app.post('/usuario', upload.single('Archivo'), (req, res) => {
-  const {nombre, apellido} = req.body; // Obtén los datos del formulario
-  const imagenPath = req.file ? req.file.path : null; // Ruta de la imagen subida
-
-  const doc = new jsPDF();
-
-  const Ancho = doc.internal.pageSize.getWidth();
-  const x = Ancho / 2;
-
-  doc.setFont('helvetica', 'bold')
-  doc.text(`Hola ${nombre},  ${apellido}`, x, 10, { align: 'center' });
-
-  if (imagenPath) {
-      // Leer la imagen y convertirla a base64
-      const imgData = fs.readFileSync(imagenPath, 'base64');
-      const imgBase64 = `data:image/png;base64,${imgData}`; 
-      doc.addImage(imgBase64, 'PNG', 10, 20, 50, 50, { align: 'center' }); // Agregar imagen al PDF
-  }
-
-  const pdfFileName = `PDF-${Date.now()}.pdf`; // Nombre único basado en la marca de tiempo
-  const pdfPath = path.join(__dirname+ '/archivoss/', pdfFileName);
-
-  doc.save(pdfPath); // Guarda el PDF
-
-  res.json({ message: "PDF generado correctamente", pdfPath });
+app.listen(9000, () => {
+    console.log(`Servidor corriendo en http://localhost:9000`);
 });
 
 
-app.listen(4000,()=>{
- console.log("Servidor Express corriendo y escuchando en el puerto 4000")
-});
-
+    
